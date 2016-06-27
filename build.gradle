@@ -2,6 +2,8 @@ group 'com.fewlaps.stalker'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "com.fewlaps.stalker.cli.Main"
 
 repositories {
     mavenCentral()
