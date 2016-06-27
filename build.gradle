@@ -18,3 +18,9 @@ dependencies {
     testCompile 'org.assertj:assertj-core:3.4.1'
     testCompile 'org.mockito:mockito-core:1.+'
 }
+
+run {
+    if (project.hasProperty("with")) {
+        args(with.split(','))
+    }
+}
