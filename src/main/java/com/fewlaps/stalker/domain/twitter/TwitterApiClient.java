@@ -31,7 +31,7 @@ public class TwitterApiClient {
                 tweets.add(new Tweet(status.getId(), status.getUser().getScreenName(), status.getText(), status.getCreatedAt()));
             }
         } catch (Exception e) {
-            throw new RuntimeException("Something bad happened");
+            throw new RuntimeException("Something bad happened: " + e.getMessage());
         }
         return tweets;
     }
