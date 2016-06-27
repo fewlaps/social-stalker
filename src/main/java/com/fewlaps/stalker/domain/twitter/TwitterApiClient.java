@@ -40,7 +40,9 @@ public class TwitterApiClient {
         Twitter twitter = getTwitterInstance();
         try {
             twitter.createFavorite(tweet.getId());
+            System.out.println("Tweet favorited:\n" + tweet.getId() + "\n" + tweet.getText() + "\n");
         } catch (TwitterException e) {
+            System.out.println("Tweet not favorited:\n" + tweet.getId() + "\n" + tweet.getText() + "\n");
             if (e.getErrorCode() != TWEET_ALREADY_FAVORITE) {
                 throw new RuntimeException("Something bad happened");
             }
